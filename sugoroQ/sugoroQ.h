@@ -1,0 +1,7 @@
+#include "def.h"
+#include "network.h"
+#include "quiz.h"
+#include "station.h"
+#include "disp.h"
+#include "client.h"
+#include "test_print.h"
