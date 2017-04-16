@@ -1,0 +1,81 @@
+
+oedasort2.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <oedasort>:
+   0:	55                   	push   %ebp
+   1:	89 e5                	mov    %esp,%ebp
+   3:	83 ec 28             	sub    $0x28,%esp
+   6:	8b 45 0c             	mov    0xc(%ebp),%eax
+   9:	89 45 f4             	mov    %eax,-0xc(%ebp)
+   c:	8b 45 10             	mov    0x10(%ebp),%eax
+   f:	89 45 f8             	mov    %eax,-0x8(%ebp)
+  12:	8b 55 f8             	mov    -0x8(%ebp),%edx
+  15:	8b 45 f4             	mov    -0xc(%ebp),%eax
+  18:	8d 14 10             	lea    (%eax,%edx,1),%edx
+  1b:	89 d0                	mov    %edx,%eax
+  1d:	c1 e8 1f             	shr    $0x1f,%eax
+  20:	01 d0                	add    %edx,%eax
+  22:	d1 f8                	sar    %eax
+  24:	c1 e0 02             	shl    $0x2,%eax
+  27:	03 45 08             	add    0x8(%ebp),%eax
+  2a:	8b 00                	mov    (%eax),%eax
+  2c:	89 45 fc             	mov    %eax,-0x4(%ebp)
+  2f:	eb 04                	jmp    35 <oedasort+0x35>
+  31:	83 45 f4 01          	addl   $0x1,-0xc(%ebp)
+  35:	8b 45 f4             	mov    -0xc(%ebp),%eax
+  38:	c1 e0 02             	shl    $0x2,%eax
+  3b:	03 45 08             	add    0x8(%ebp),%eax
+  3e:	8b 00                	mov    (%eax),%eax
+  40:	3b 45 fc             	cmp    -0x4(%ebp),%eax
+  43:	7c ec                	jl     31 <oedasort+0x31>
+  45:	eb 04                	jmp    4b <oedasort+0x4b>
+  47:	83 6d f8 01          	subl   $0x1,-0x8(%ebp)
+  4b:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  4e:	c1 e0 02             	shl    $0x2,%eax
+  51:	03 45 08             	add    0x8(%ebp),%eax
+  54:	8b 00                	mov    (%eax),%eax
+  56:	3b 45 fc             	cmp    -0x4(%ebp),%eax
+  59:	7f ec                	jg     47 <oedasort+0x47>
+  5b:	8b 45 f4             	mov    -0xc(%ebp),%eax
+  5e:	3b 45 f8             	cmp    -0x8(%ebp),%eax
+  61:	7f 28                	jg     8b <oedasort+0x8b>
+  63:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  66:	c1 e0 02             	shl    $0x2,%eax
+  69:	89 c2                	mov    %eax,%edx
+  6b:	03 55 08             	add    0x8(%ebp),%edx
+  6e:	8b 45 f4             	mov    -0xc(%ebp),%eax
+  71:	c1 e0 02             	shl    $0x2,%eax
+  74:	03 45 08             	add    0x8(%ebp),%eax
+  77:	89 54 24 04          	mov    %edx,0x4(%esp)
+  7b:	89 04 24             	mov    %eax,(%esp)
+  7e:	e8 fc ff ff ff       	call   7f <oedasort+0x7f>
+  83:	83 45 f4 01          	addl   $0x1,-0xc(%ebp)
+  87:	83 6d f8 01          	subl   $0x1,-0x8(%ebp)
+  8b:	8b 45 f4             	mov    -0xc(%ebp),%eax
+  8e:	3b 45 f8             	cmp    -0x8(%ebp),%eax
+  91:	7e a2                	jle    35 <oedasort+0x35>
+  93:	8b 45 0c             	mov    0xc(%ebp),%eax
+  96:	3b 45 f8             	cmp    -0x8(%ebp),%eax
+  99:	7d 19                	jge    b4 <oedasort+0xb4>
+  9b:	8b 45 f8             	mov    -0x8(%ebp),%eax
+  9e:	89 44 24 08          	mov    %eax,0x8(%esp)
+  a2:	8b 45 0c             	mov    0xc(%ebp),%eax
+  a5:	89 44 24 04          	mov    %eax,0x4(%esp)
+  a9:	8b 45 08             	mov    0x8(%ebp),%eax
+  ac:	89 04 24             	mov    %eax,(%esp)
+  af:	e8 fc ff ff ff       	call   b0 <oedasort+0xb0>
+  b4:	8b 45 f4             	mov    -0xc(%ebp),%eax
+  b7:	3b 45 10             	cmp    0x10(%ebp),%eax
+  ba:	7d 19                	jge    d5 <oedasort+0xd5>
+  bc:	8b 45 10             	mov    0x10(%ebp),%eax
+  bf:	89 44 24 08          	mov    %eax,0x8(%esp)
+  c3:	8b 45 f4             	mov    -0xc(%ebp),%eax
+  c6:	89 44 24 04          	mov    %eax,0x4(%esp)
+  ca:	8b 45 08             	mov    0x8(%ebp),%eax
+  cd:	89 04 24             	mov    %eax,(%esp)
+  d0:	e8 fc ff ff ff       	call   d1 <oedasort+0xd1>
+  d5:	c9                   	leave  
+  d6:	c3                   	ret    

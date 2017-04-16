@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+int ruijyo(int a,int b);
+
+int main(void)
+{
+  int x,y,z;
+
+  printf("’¿ô’¡§");
+  scanf("%d",&x);
+  printf("’²¿’¾è’Ã×’¤·’¤Þ’¤¹’¤«’¡©’¡§");
+  scanf("%d",&y);
+
+  z = ruijyo(x,y);
+
+  printf("%d\n",z);
+
+  return 0;
+}
+
+2int ruijyo(int a,int b)
+{
+
+  int c,d;
+  c = a;
+
+  for (d=1; d<b; d++) {
+    a = a * c;
+  }
+
+  return a;
+
+}
