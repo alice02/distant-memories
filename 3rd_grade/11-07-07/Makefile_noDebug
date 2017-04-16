@@ -1,0 +1,8 @@
+all:	factorial_noDebug
+
+clean:
+	rm *.o
+
+factorial_noDebug:	factorial.o \
+			factorial_main.o
+	gcc -o $@ $^
